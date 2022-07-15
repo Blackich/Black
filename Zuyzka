@@ -1,0 +1,25 @@
+function encrypt (str) {
+
+let arr = str.split('');
+let newArr = [];
+let lastSymb = arr.slice(-1;)
+
+let i = 0;
+
+while (arr[i+1] !== undefined) {
+  newArr.push(arr[i+1] + arr[i]);
+  i += 2;
+  }
+
+if (arr.length % 2 !== 0) {
+  newArr.push(lastSymb);
+}
+     
+  return newArr;
+}
+
+
+
+alert(encrypt('mother'));
+alert(encrypt('for'));
+alert(encrypt('cucumber!'));
